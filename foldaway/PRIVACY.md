@@ -16,9 +16,13 @@ analytics and no ads, and it never sells or shares anything about you.
   choices in Settings.
 - **Your most visited sites, as Chrome lists them.** Read once, the first time Foldaway opens, to
   start your shortcut circles with the sites you use most. Only the circles are kept.
-- **The page in the tab you're looking at, compared with your folders.** Foldaway checks, on your
-  computer, whether that page is already in a folder, and if so shows a notification. You can
-  turn this off in Settings ("Tell me when I open a tab that's already put away").
+- **The address each open tab is on.** When you close a tab, Foldaway checks, on your computer,
+  whether its page is in one of your folders, and if so asks whether to remove it from there
+  too. The addresses are kept in temporary storage that Chrome clears when it closes. You can
+  turn the question off in Settings ("When I close a saved tab, ask whether to remove it from
+  its folder").
+- **A background picture, if you choose one.** Foldaway keeps a smaller copy in its storage on
+  your computer, to show behind your folders. It's never uploaded, and it isn't part of backups.
 - **When you last looked at each tab.** This is used only to decide which tabs have been idle
   long enough to sleep or be put away. It's kept in temporary storage that Chrome clears when it
   closes.
@@ -64,7 +68,7 @@ stored, so export a backup first if you want to keep your folders.
 | Storage (`storage`, `unlimitedStorage`) | To keep your folders on your computer, with no size limit. |
 | Alarms (`alarms`) | To check once a minute for tabs that have been idle long enough to sleep or be put away. |
 | Search (`search`) | To send searches to your default search engine. |
-| Notifications (`notifications`) | To tell you when you open a page that's already put away (you can turn this off in Settings). |
+| Right-click menu (`contextMenus`) | To add "Put this tab away" to the menu you get when you right-click a page. |
 | New tab page | To show Foldaway when you open a new tab. |
 
 Foldaway's use of this information follows the
