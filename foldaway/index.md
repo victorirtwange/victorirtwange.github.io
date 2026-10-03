@@ -1,4 +1,8 @@
-# Foldaway
+---
+title: Foldaway
+---
+
+# <img src="icon.png" alt="" width="44" height="44" style="vertical-align: middle; margin: -6px 10px 0 -5px"> Foldaway
 
 **Hoard tabs, guilt-free.** A Chrome extension that turns your new tab page into a calm place: a
 search bar, your shortcuts, and folders where you put your open tabs away. One click puts them
