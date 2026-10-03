@@ -15,17 +15,22 @@ analytics and no ads, and it never sells or shares anything about you.
   tabs (address, title, site icon and the date you put them away), your shortcuts, and your
   choices in Settings.
 - **Your most visited sites, as Chrome lists them.** Read once, the first time Foldaway opens, to
-  start your shortcut circles with the sites you use most. Only the circles are kept.
+  start your shortcut circles with the sites you use most. The circles are kept, and so is that
+  first list, so that an import can tell whether you've changed your circles since.
 - **The address each open tab is on.** When you close a tab, Foldaway checks, on your computer,
   whether its page is in one of your folders, and if so asks whether to remove it from there
-  too. The addresses are kept in temporary storage that Chrome clears when it closes. You can
-  turn the question off in Settings ("When I close a saved tab, ask whether to remove it from
-  its folder").
+  too. The addresses are kept in temporary storage that Chrome clears when it closes (noted
+  whether or not the question is on, so it's ready whenever it is). You can turn the question
+  off in Settings ("When I close a saved tab, ask whether to remove it from its folder").
 - **A background picture, if you choose one.** Foldaway keeps a smaller copy in its storage on
   your computer, to show behind your folders. It's never uploaded, and it isn't part of backups.
 - **When you last looked at each tab.** This is used only to decide which tabs have been idle
   long enough to sleep or be put away. It's kept in temporary storage that Chrome clears when it
   closes.
+- **What Foldaway put away by itself, for a day.** When the timer or Alt+Shift+O puts tabs away,
+  the next new tab says so and offers Undo, so for a day Foldaway keeps a list of those tabs
+  (address, title, and where each one was in your windows). After a day, or once you've used
+  Undo or dismissed the note, it's deleted.
 - **When you last saved a backup.** So that Foldaway can remind you (a small dot on the Settings
   gear) when it's been a month.
 
@@ -52,7 +57,9 @@ and only when you ask for them:
 ## Backups
 
 **Settings → Backup → Export** saves a file to your computer that only you control. **Import**
-reads a file you choose. Neither sends anything anywhere.
+reads a file you choose (a Foldaway backup, or tabs saved by another app such as OneTab, Toby or
+Session Buddy, or a bookmarks file) or a list of links you paste in, and adds those tabs to your
+folders. Neither sends anything anywhere.
 
 **Keep a copy in Chrome bookmarks** is off unless you turn it on, and Chrome asks for your
 permission first. While it's on, Foldaway writes your folders' names and their tabs' titles and
@@ -73,7 +80,7 @@ until you delete it.
 
 | Permission | Why Foldaway needs it |
 |---|---|
-| Read your open tabs (`tabs`) | To list your open tabs and save the ones you put away. |
+| Read your open tabs (`tabs`) | To list your open tabs, save the ones you put away, notice when a saved page's tab is closed, and find tabs that have been idle. |
 | Tab groups (`tabGroups`) | To name folders after your tab groups and put tabs back into them. |
 | Site icons (`favicon`) | To show each site's icon, taken from Chrome's own icon cache. |
 | Most visited sites (`topSites`) | To start your shortcut circles with the sites you visit most, the first time Foldaway opens. |
