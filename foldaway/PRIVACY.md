@@ -30,6 +30,9 @@ menu loads that menu's icons from Google, with nothing about you.
 - **A background picture, if you choose one.** Foldaway keeps a smaller copy in its storage on
   your computer, to show behind your folders, with two colours picked out of it on your computer
   for "Colours from your picture". It's never uploaded, and it isn't part of backups.
+- **The tabs you keep open.** When you choose "Keep this tab open", Foldaway notes that tab and
+  the address it's on, on your computer, so that putting tabs away leaves it alone, even after
+  Chrome restarts (it's found again by its address). It's forgotten once you close the tab.
 - **Whether Foldaway is your new tab page.** Chrome shows one extension's new tab page. Foldaway
   notes, on your computer, whether it's the one, so that its toolbar button can open your folders
   either way.
@@ -129,14 +132,14 @@ until you delete it.
 
 | Permission | Why Foldaway needs it |
 |---|---|
-| Read your open tabs (`tabs`) | To list your open tabs, save the ones you put away, notice when a saved page's tab is closed, find tabs that have been idle, suggest the sites you have open as you type in Settings, tick "Keep this site open" for the page you're on, and tell whether a new tab is showing Foldaway. |
+| Read your open tabs (`tabs`) | To list your open tabs, save the ones you put away, notice when a saved page's tab is closed, find tabs that have been idle, suggest the sites you have open as you type in Settings, tick "Keep this tab open" and "Keep this site open" for the page you're on, and tell whether a new tab is showing Foldaway. |
 | Tab groups (`tabGroups`) | To name folders after your tab groups and put tabs back into them. |
 | Site icons (`favicon`) | To show each site's icon, taken from Chrome's own icon cache. |
 | Most visited sites (`topSites`) | To start your shortcut circles with the sites you visit most, the first time Foldaway opens, and to suggest sites when you type in Settings' site lists. |
 | Storage (`storage`, `unlimitedStorage`) | To keep your folders on your computer, with no size limit. |
 | Alarms (`alarms`) | To check once a minute for tabs that have been idle long enough to sleep or be put away. |
 | Search (`search`) | To send searches to your default search engine. |
-| Right-click menu (`contextMenus`) | To add "Put this tab away" and "Keep this site open" to the menu you get when you right-click a page. |
+| Right-click menu (`contextMenus`) | To add "Put this tab away", "Keep this tab open" and "Keep this site open" (named for the site, such as "Keep youtube.com open") to the menu you get when you right-click a page. |
 | New tab page | To show Foldaway when you open a new tab. |
 | Bookmarks (`bookmarks`), optional | Asked for only when you turn on "Keep a copy in Chrome bookmarks" or import from it: to write the copy of your folders into your bookmarks and read it back. |
 
