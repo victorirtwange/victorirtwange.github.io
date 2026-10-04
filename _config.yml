@@ -1,1 +1,13 @@
 title: Victor Irtwange
+
+# Foldaway's pages have their own look (_layouts/foldaway.html; the stylesheet is
+# foldaway/site.css). The privacy policy stays plain Markdown, the same file as in
+# Foldaway's own repository, so its layout and title are given here.
+defaults:
+  - scope:
+      path: "foldaway/PRIVACY.md"
+    values:
+      layout: foldaway-doc
+      title: "Privacy policy · Foldaway"
+      description: "What Foldaway handles, where it's kept, and what leaves your computer."
+      bodyclass: doc-page

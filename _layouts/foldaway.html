@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" href="/foldaway/icon.png">
+  <!-- Everything comes from this site, the font too: nothing is asked of anyone else. -->
+  <link rel="preload" href="/foldaway/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/foldaway/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Foldaway">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="https://victorirtwange.github.io{{ page.url }}">
+  <meta property="og:image" content="https://victorirtwange.github.io/foldaway/new-tab.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="{{ page.bodyclass }}">
+  <a class="skip" href="#main">Skip to the content</a>
+{{ content }}
+</body>
+</html>

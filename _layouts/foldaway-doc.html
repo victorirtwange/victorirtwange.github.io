@@ -1,0 +1,46 @@
+---
+layout: foldaway
+---
+<header class="doc-head">
+  {% include foldaway-bar.html here="privacy" %}
+</header>
+<main class="doc" id="main">
+{{ content }}
+</main>
+{% include foldaway-footer.html %}
+<script>
+  // The policy is plain Markdown, the same file as in Foldaway's own repository;
+  // this dresses it: the date as a subtitle, "In short" as a card, links to each
+  // part under it, and the table able to scroll on a phone. (Without it, the
+  // page reads the same.)
+  (() => {
+    const doc = document.querySelector('.doc');
+    const paras = [...doc.querySelectorAll(':scope > p')];
+    const updated = paras.find((p) => /^Last updated/i.test(p.textContent.trim()));
+    if (updated) updated.classList.add('updated');
+    const summary = paras.find((p) => p.firstElementChild?.tagName === 'STRONG' && /^In short/i.test(p.firstElementChild.textContent));
+    if (summary) {
+      summary.classList.add('summary');
+      summary.firstElementChild.textContent = 'In short';
+    }
+    const parts = [...doc.querySelectorAll('h2[id]')];
+    if (parts.length) {
+      const nav = document.createElement('nav');
+      nav.className = 'toc';
+      nav.setAttribute('aria-label', 'On this page');
+      for (const h of parts) {
+        const a = document.createElement('a');
+        a.href = `#${h.id}`;
+        a.textContent = h.textContent;
+        nav.append(a);
+      }
+      (summary || updated || doc.querySelector('h1')).after(nav);
+    }
+    for (const table of doc.querySelectorAll('table')) {
+      const wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      table.before(wrap);
+      wrap.append(table);
+    }
+  })();
+</script>
