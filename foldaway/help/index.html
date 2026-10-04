@@ -1,0 +1,29 @@
+---
+layout: foldaway
+title: "Help · Foldaway"
+description: "Answers to the questions people ask about Foldaway, and how to report a problem."
+bodyclass: doc-page
+---
+<header class="doc-head">
+  {% include foldaway-bar.html here="help" %}
+</header>
+<main class="doc help" id="main">
+  <h1>Help</h1>
+  <p class="updated">Answers to the questions people ask most. Something else, or something not working? Tell me below.</p>
+
+  <div class="faq-list">
+    {% include foldaway-faq.html %}
+  </div>
+
+  <section class="report-card" aria-labelledby="reportTitle">
+    <h2 id="reportTitle">Report a problem</h2>
+    <p>The quickest way is from Foldaway itself: <strong>Settings → About Foldaway → Report a problem</strong>.
+      It opens a short form with Foldaway's version and settings already filled in for you to check,
+      never your tabs.</p>
+    <p class="report-actions">
+      <a class="btn-store" href="/foldaway/report/">Open the form</a>
+      <a class="text-link" href="https://github.com/victorirtwange/victorirtwange.github.io/issues/new?template=foldaway-problem.yml">Or open an issue on GitHub</a>
+    </p>
+  </section>
+</main>
+{% include foldaway-footer.html %}

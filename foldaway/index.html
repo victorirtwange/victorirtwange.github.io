@@ -240,41 +240,10 @@ bodyclass: home
   <section class="faq" aria-labelledby="faqTitle">
     <div class="faq-head">
       <h2 id="faqTitle">Questions</h2>
-      <p>Something else? <a href="https://github.com/victorirtwange/victorirtwange.github.io/issues/new?template=foldaway-problem.yml">Ask here</a>.</p>
+      <p>Something else, or something not working? <a href="/foldaway/help/">Get help</a> or <a href="/foldaway/report/">report a problem</a>.</p>
     </div>
     <div class="faq-list">
-      <details>
-        <summary>Where are my tabs kept?</summary>
-        <p>On your computer, in Chrome's storage for Foldaway. Settings → Backup can export
-          everything to a file whenever you like, or keep a copy in your Chrome bookmarks that stays
-          up to date by itself (and syncs with your Google account if Chrome sync is on).</p>
-      </details>
-      <details>
-        <summary>What happens to my folders if I remove Foldaway?</summary>
-        <p>Chrome deletes Foldaway's storage with it, so export a backup first. A copy in your
-          bookmarks stays, and Foldaway can bring your folders back from it.</p>
-      </details>
-      <details>
-        <summary>I already use another new tab extension. Can I keep it?</summary>
-        <p>Yes. Chrome gives the new tab page to one extension at a time; if another one has it,
-          Foldaway's toolbar button (and Alt+T) still opens your folders in a tab of their own.</p>
-      </details>
-      <details>
-        <summary>Can I bring my tabs from OneTab, Toby or Session Buddy?</summary>
-        <p>Yes: Settings → Backup → Import reads their export files, a list pasted from OneTab, or
-          any browser's bookmarks file.</p>
-      </details>
-      <details>
-        <summary>Does Foldaway cost anything?</summary>
-        <p>No. It's free, with no account to make.</p>
-      </details>
-      <details>
-        <summary>What does the weather send?</summary>
-        <p>Nothing unless you turn it on. Then your city's rough position goes to MET Norway for the
-          forecast, and what you type to find your city goes to Photon, a place search.
-          <a href="/foldaway/PRIVACY.html#what-leaves-your-computer">The privacy policy</a> has the
-          details.</p>
-      </details>
+      {% include foldaway-faq.html %}
     </div>
   </section>
 </main>

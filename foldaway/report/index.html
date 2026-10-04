@@ -1,0 +1,38 @@
+---
+layout: foldaway
+title: "Report a problem · Foldaway"
+description: "Tell Foldaway's maker what went wrong."
+bodyclass: doc-page
+---
+<header class="doc-head">
+  {% include foldaway-bar.html %}
+</header>
+<main class="doc" id="main">
+  <h1>Report a problem</h1>
+  <p class="updated" id="reportNote">Taking you to the form…</p>
+  <p><a class="btn-store" id="reportGo" href="https://github.com/victorirtwange/victorirtwange.github.io/issues/new?template=foldaway-problem.yml">Open the form</a></p>
+</main>
+{% include foldaway-footer.html %}
+<script>
+  // Where reports go: a Google Form (the owner's pick). Its address and the ids
+  // of its "What happened?" and "Technical details" boxes, from its pre-filled
+  // link; with none yet, GitHub's issue form.
+  const FORM = { url: '', what: '', details: '' };
+  const GITHUB = 'https://github.com/victorirtwange/victorirtwange.github.io/issues/new?template=foldaway-problem.yml';
+  // From Foldaway (Settings → About Foldaway → Report a problem) or the page
+  // shown after removing it: what to fill in, after the #, which never reaches
+  // this website.
+  const given = new URLSearchParams(location.hash.slice(1));
+  const details = given.get('details') || '';
+  const version = given.get('v') || '';
+  let to = GITHUB + (version ? `&version=${encodeURIComponent(version)}` : '');
+  if (FORM.url) {
+    const form = new URL(FORM.url);
+    form.searchParams.set('usp', 'pp_url');
+    if (details && FORM.details) form.searchParams.set(`entry.${FORM.details}`, details);
+    to = form.toString();
+  }
+  document.getElementById('reportGo').href = to;
+  document.getElementById('reportNote').textContent = 'If the form doesn’t open by itself, use the button.';
+  location.replace(to);
+</script>

@@ -1,0 +1,37 @@
+---
+layout: foldaway
+title: "Foldaway has been removed"
+description: "How to get your folders back, and how to say what went wrong."
+bodyclass: doc-page
+---
+<!-- Chrome opens this when Foldaway is removed (chrome.runtime.setUninstallURL in
+     background.js; the owner's pick): help for anyone who removed it by mistake,
+     and a way to say what went wrong. Foldaway's version comes after the #. -->
+<header class="doc-head">
+  {% include foldaway-bar.html %}
+</header>
+<main class="doc" id="main">
+  <h1>Foldaway has been removed</h1>
+  <p class="updated">Thanks for giving it a try.</p>
+
+  <section class="report-card" aria-labelledby="backTitle">
+    <h2 id="backTitle">Removed it by mistake?</h2>
+    <p>Removing Foldaway deleted the folders it kept. If you kept a copy in your Chrome bookmarks
+      (Settings → Backup), it's still there: add Foldaway again, then <strong>Settings → Backup →
+      Import</strong> brings your folders back. A backup file you exported works the same way.</p>
+    <p class="report-actions">
+      <a class="btn-store" href="https://chromewebstore.google.com/detail/jmffhgplljpdhfhocfbecnlilmldliej">Add Foldaway again</a>
+    </p>
+  </section>
+
+  <h2>Did something go wrong?</h2>
+  <p>A minute of your time helps make Foldaway better for everyone.
+    <a id="byeReport" href="/foldaway/report/">Tell me what happened</a>.</p>
+</main>
+{% include foldaway-footer.html %}
+<script>
+  // The form, with "Removed Foldaway" and its version in its technical details.
+  const version = new URLSearchParams(location.hash.slice(1)).get('v') || '';
+  const details = `Removed Foldaway${version ? ` ${version}` : ''}`;
+  document.getElementById('byeReport').href = `/foldaway/report/#v=${encodeURIComponent(version)}&details=${encodeURIComponent(details)}`;
+</script>

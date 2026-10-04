@@ -86,6 +86,14 @@ them:
   like the same button on Chrome's own new tab page.
 - **Opening saved tabs and links.** Opening a saved tab, a shortcut, or one of the Gmail, Images
   and Google apps links loads that website, as any link would.
+- **Reporting a problem.** Settings → About Foldaway → Report a problem opens a form at Google
+  Forms, by way of a page on Foldaway's website, with technical details filled in for you to see,
+  change or delete: Foldaway's and Chrome's versions, your system and language, which of its
+  features are on, and how many folders and saved tabs you have (never a tab, its title or its
+  address). Google receives those details as the form opens; what you write, and your email
+  address if you give it, only when you send the form.
+- **Removing Foldaway.** When you remove it, Chrome opens a page on Foldaway's website with help
+  to get your folders back and a way to say what went wrong.
 
 ## Backups
 
@@ -134,5 +142,6 @@ If this policy changes, the new version will be published here with a new date.
 
 ## Questions
 
-Open an issue at
+Ask through Foldaway's [help page](https://victorirtwange.github.io/foldaway/help/), or open an
+issue at
 [github.com/victorirtwange/victorirtwange.github.io/issues](https://github.com/victorirtwange/victorirtwange.github.io/issues).
