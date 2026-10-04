@@ -1,0 +1,26 @@
+name: "Foldaway: help or a problem"
+description: A question about Foldaway, or something in it that isn't working as it should.
+title: "Foldaway: "
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time. Please leave out anything private, such as the addresses of your saved tabs.
+  - type: textarea
+    id: what
+    attributes:
+      label: What would you like help with, or what happened?
+      description: If something went wrong, say what you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Foldaway version
+      description: Settings → About Foldaway shows it.
+      placeholder: "1.1.0"
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version and computer
+      description: In Chrome, ⋮ → Help → About Google Chrome shows the version. And Windows, macOS, ChromeOS or Linux?
+      placeholder: "Chrome 141 on Windows 11"
