@@ -5,7 +5,8 @@
 **In short:** Foldaway keeps everything on your own computer. It has no server, no account, no
 analytics and no ads, and it never sells anything about you. By itself, it sends nothing anywhere
 unless you turn on the weather: then your chosen city's rough position goes to MET Norway for the
-forecast, and what you type to find your city goes to Photon (by Komoot).
+forecast, and what you type to find your city goes to Photon (by Komoot). Opening its Google apps
+menu loads that menu's icons from Google, with nothing about you.
 
 ## What Foldaway handles, and why
 
@@ -14,8 +15,8 @@ forecast, and what you type to find your city goes to Photon (by Komoot).
 - **Your Chrome tab groups' names and colours.** Folders are named after them, and tabs go back
   into their group when you undo or reopen them.
 - **Your folders, shortcut circles and settings.** These are what you create in Foldaway: saved
-  tabs (address, title, site icon and the date you put them away), your shortcuts, and your
-  choices in Settings.
+  tabs (address, title, site icon and the date you put them away), your shortcuts, your choices
+  in Settings, and the apps you pick as favourites in the Google apps menu.
 - **Your most visited sites, as Chrome lists them.** Read the first time Foldaway opens, to
   start your shortcut circles with the sites you use most. The circles are kept, and so is that
   first list, so that an import can tell whether you've changed your circles since. They're also
@@ -61,8 +62,9 @@ the weather's rough position described below.
 ## What leaves your computer
 
 Foldaway sends nothing anywhere unless you turn on the weather, and its page loads nothing else
-from the web (even its font is part of the extension). The weather is off unless you turn it on
-in Settings → Clock & weather:
+from the web (even its font is part of the extension) but the Google apps menu's icons, when you
+open that menu (see below). The weather is off unless you turn it on in Settings → Clock &
+weather:
 
 - **The forecast.** While the weather is on, Foldaway asks MET Norway (the Norwegian
   Meteorological Institute, [met.no](https://www.met.no/en)) for the forecast at your city's
@@ -84,6 +86,12 @@ them:
   search engine, exactly as if you had typed it into the address bar.
 - **AI Mode.** The search bar's AI Mode button opens Google's AI Mode with whatever you typed,
   like the same button on Chrome's own new tab page.
+- **The Google apps menu's icons.** The first time you open the Google apps menu (the nine dots
+  at the top right), its icons load from Google's server (ssl.gstatic.com), as one picture, the
+  one Google's own apps menu shows; Chrome then keeps it, so it loads again only if Chrome's
+  cached images are cleared. Nothing about you or your tabs is sent with it; as with any website,
+  Google sees your internet address. Never opened, or hidden (Settings → Appearance), the menu
+  loads nothing.
 - **Opening saved tabs and links.** Opening a saved tab, a shortcut, or one of the Gmail, Images
   and Google apps links loads that website, as any link would.
 - **Reporting a problem.** Settings → About Foldaway → Report a problem opens a form at Google
