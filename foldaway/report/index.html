@@ -10,14 +10,15 @@ bodyclass: doc-page
 <main class="doc" id="main">
   <h1>Report a problem</h1>
   <p class="updated" id="reportNote">Taking you to the form…</p>
-  <p><a class="btn-store" id="reportGo" href="https://github.com/victorirtwange/victorirtwange.github.io/issues/new?template=foldaway-problem.yml">Open the form</a></p>
+  <p><a class="btn-store" id="reportGo" href="https://forms.gle/tPCVmEWg1Y7UsRAQ8">Open the form</a></p>
 </main>
 {% include foldaway-footer.html %}
 <script>
-  // Where reports go: a Google Form (the owner's pick). Its address and the ids
-  // of its "What happened?" and "Technical details" boxes, from its pre-filled
-  // link; with none yet, GitHub's issue form.
-  const FORM = { url: '', what: '', details: '' };
+  // Where reports go: the owner's Google Form, "Report a problem with Foldaway"
+  // (forms.gle/tPCVmEWg1Y7UsRAQ8). Its address and the entry ids of its "What
+  // happened" and "Technical details" boxes, as its pre-filled links use them;
+  // with no form set, GitHub's issue form.
+  const FORM = { url: 'https://docs.google.com/forms/d/e/1FAIpQLScLARAddVSd5fEBhZLy_OFlau99zqLv7UbC6wi6sQjGpMb6yg/viewform', what: '1302394068', details: '2125129323' };
   const GITHUB = 'https://github.com/victorirtwange/victorirtwange.github.io/issues/new?template=foldaway-problem.yml';
   // From Foldaway (Settings → About Foldaway → Report a problem) or the page
   // shown after removing it: what to fill in, after the #, which never reaches
