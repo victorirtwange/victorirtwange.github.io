@@ -4,40 +4,121 @@ title: "Foldaway: hoard tabs, guilt-free"
 description: "A Chrome extension that turns your new tab page into a calm place: one click puts your open tabs away into tidy folders, and another brings any of them back."
 bodyclass: home
 ---
-<!-- Foldaway's homepage (the owner's pick of three sketches: a product page with
-     sections). The pictures are the extension itself, from its preview, light or
-     dark as the visitor's system is. -->
+<!-- Foldaway's homepage (the owner's picks from sketches: a product page with
+     sections, quiet and Chrome-native, opening on tabs folding into a folder).
+     The pictures are the extension itself, from its preview, light or dark as the
+     visitor's system is. -->
 <header class="hero">
   {% include foldaway-bar.html %}
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1>Hoard tabs, <span class="nowrap">guilt-free.</span></h1>
-      <p class="lede">Foldaway turns your new tab page into a calm place. One click puts your open tabs
-        away into tidy folders; another brings any of them back.</p>
-      <div class="cta">
-        <a class="btn-store" href="https://chromewebstore.google.com/detail/jmffhgplljpdhfhocfbecnlilmldliej">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-          Add to Chrome
-        </a>
-        <span class="cta-note">Free, with no account</span>
-      </div>
+  <div class="hero-text">
+    <h1>Hoard tabs, <span class="nowrap">guilt-free.</span></h1>
+    <p class="lede">A calm new tab page for Chrome. One click puts your open tabs away into tidy
+      folders; another brings any of them back.</p>
+    <div class="cta">
+      <a class="btn-store" href="https://chromewebstore.google.com/detail/jmffhgplljpdhfhocfbecnlilmldliej">Add to Chrome</a>
+      <span class="cta-note">Free, with no account</span>
     </div>
-    <figure class="hero-shot">
-      <div class="frame">
-        <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-        <img src="/foldaway/images/new-tab.webp" width="1920" height="1200"
-             alt="Foldaway's new tab page: a search bar, shortcut circles, and folders of saved tabs, each showing its tabs' icons">
-      </div>
-    </figure>
   </div>
+
+  <!-- What Foldaway does, drawn: a pointer clicks "Put away open tabs" and the tabs drop
+       from Chrome's tab strip into a folder. Plays once (click it to play it again); still,
+       in its end state, for people who turn motion off. -->
+  <figure class="scene" id="scene">
+    <svg viewBox="0 0 960 414" role="img" aria-labelledby="sceneTitle">
+      <title id="sceneTitle">Six open tabs drop out of Chrome's tab strip into a folder called Reading on Foldaway's new tab page.</title>
+      <rect class="s-win" x="0.5" y="0.5" width="959" height="413" rx="18"/>
+      <path class="s-strip" d="M18.5 .5h923a18 18 0 0 1 18 18V48H.5V18.5a18 18 0 0 1 18-18z"/>
+      <circle class="s-dot" cx="26" cy="24" r="5.5"/><circle class="s-dot" cx="44" cy="24" r="5.5"/><circle class="s-dot" cx="62" cy="24" r="5.5"/>
+      <!-- The tab you're on: Foldaway's new tab page -->
+      <path class="s-bar" d="M84 49V18a10 10 0 0 1 10-10h132a10 10 0 0 1 10 10v31z"/>
+      <image href="/foldaway/icon.png" x="98" y="19" width="16" height="16"/>
+      <text class="s-text s-tab-text" x="122" y="31.5">New Tab</text>
+      <!-- The other tabs' names; their icons are the ones that fly (below) -->
+      <g class="s-tabs">
+        <g class="tabgo" style="--d: 1.00s"><text x="278" y="31.5">Inbox</text><line x1="350" y1="17" x2="350" y2="35"/></g>
+        <g class="tabgo" style="--d: 1.15s"><text x="388" y="31.5">Bridges</text><line x1="460" y1="17" x2="460" y2="35"/></g>
+        <g class="tabgo" style="--d: 1.30s"><text x="498" y="31.5">Bauhaus</text><line x1="570" y1="17" x2="570" y2="35"/></g>
+        <g class="tabgo" style="--d: 1.45s"><text x="608" y="31.5">Trams</text><line x1="680" y1="17" x2="680" y2="35"/></g>
+        <g class="tabgo" style="--d: 1.60s"><text x="718" y="31.5">Flights</text><line x1="790" y1="17" x2="790" y2="35"/></g>
+        <g class="tabgo" style="--d: 1.75s"><text x="828" y="31.5">Sourdough</text></g>
+      </g>
+      <!-- The toolbar -->
+      <rect class="s-bar" x=".5" y="48" width="959" height="44"/>
+      <rect class="s-omni" x="84" y="56" width="792" height="28" rx="14"/>
+      <circle class="s-line" cx="104" cy="69" r="5"/><path class="s-line" d="m108 73 3.5 3.5"/>
+      <text class="s-muted" x="122" y="74.5">Search or type a URL</text>
+      <circle class="s-me" cx="912" cy="70" r="11"/>
+      <line class="s-rule" x1=".5" y1="92" x2="959.5" y2="92"/>
+      <!-- Foldaway's page -->
+      <rect class="s-pill" x="270" y="122" width="420" height="40" rx="20"/>
+      <circle class="s-line" cx="294" cy="141" r="6"/><path class="s-line" d="m298.5 145.5 4 4"/>
+      <text class="s-muted s-big" x="314" y="146.5">Search or type a URL</text>
+      <g class="chip">
+        <rect class="s-pill" x="398" y="178" width="164" height="30" rx="15"/>
+        <path class="s-line" d="M414 189h12v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 414 197zM413 186h14v3h-14zM418.5 192h3"/>
+        <text class="s-text" x="434" y="197.5">Put away open tabs</text>
+      </g>
+      <!-- Three folders: Work and Design hold tabs already; Reading fills up -->
+      <g>
+        <rect class="s-tile" x="268" y="236" width="112" height="112" rx="30"/>
+        <g class="mono"><rect x="281" y="249" width="22" height="22" rx="6" fill="#4285F4"/><text x="292" y="264.5">D</text></g>
+        <g class="mono"><rect x="313" y="249" width="22" height="22" rx="6" fill="#34A853"/><text x="324" y="264.5">C</text></g>
+        <g class="mono"><rect x="345" y="249" width="22" height="22" rx="6" fill="#7B1FA2"/><text x="356" y="264.5">S</text></g>
+        <g class="mono"><rect x="281" y="281" width="22" height="22" rx="6" fill="#EA4335"/><text x="292" y="296.5">M</text></g>
+        <text class="s-text s-name" x="324" y="372">Work</text>
+      </g>
+      <g class="reading">
+        <rect class="s-tile" x="424" y="236" width="112" height="112" rx="30"/>
+        <text class="s-text s-name" x="480" y="372">Reading</text>
+      </g>
+      <g>
+        <rect class="s-tile" x="580" y="236" width="112" height="112" rx="30"/>
+        <g class="mono"><rect x="593" y="249" width="22" height="22" rx="6" fill="#A142F4"/><text x="604" y="264.5">F</text></g>
+        <g class="mono"><rect x="625" y="249" width="22" height="22" rx="6" fill="#E8710A"/><text x="636" y="264.5">D</text></g>
+        <g class="mono"><rect x="657" y="249" width="22" height="22" rx="6" fill="#12B5CB"/><text x="668" y="264.5">B</text></g>
+        <text class="s-text s-name" x="636" y="372">Design</text>
+      </g>
+      <!-- The tabs' icons: drawn where they land in Reading, flown in from their tabs
+           (--dx/--dy: from the tab to here, centre to centre) -->
+      <g transform="translate(437 249)"><g class="fx" style="--d: 1.00s; --dx: -186px"><g class="fy" style="--d: 1.00s; --dy: -233px"><g class="fs" style="--d: 1.00s">
+        <rect width="22" height="22" rx="6" fill="#1A73E8"/><g class="glyph"><rect x="5.5" y="7" width="11" height="8.5" rx="1.5"/><path d="m6 8 5 3.6L16 8"/></g>
+      </g></g></g></g>
+      <g transform="translate(469 249)"><g class="fx" style="--d: 1.15s; --dx: -108px"><g class="fy" style="--d: 1.15s; --dy: -233px"><g class="fs" style="--d: 1.15s">
+        <rect width="22" height="22" rx="6" fill="#E53935"/><path d="M9 7.2v7.6l6.2-3.8z" fill="#FFFFFF"/>
+      </g></g></g></g>
+      <g transform="translate(501 249)"><g class="fx" style="--d: 1.30s; --dx: -30px"><g class="fy" style="--d: 1.30s; --dy: -233px"><g class="fs" style="--d: 1.30s">
+        <rect x=".5" y=".5" width="21" height="21" rx="5.5" fill="#FFFFFF" stroke="#DADCE0"/><text class="wiki" x="11" y="15.6">W</text>
+      </g></g></g></g>
+      <g transform="translate(437 281)"><g class="fx" style="--d: 1.45s; --dx: 144px"><g class="fy" style="--d: 1.45s; --dy: -265px"><g class="fs" style="--d: 1.45s">
+        <rect width="22" height="22" rx="6" fill="#188038"/><g class="glyph"><path d="M11 17.2s-4-4.1-4-6.9a4 4 0 0 1 8 0c0 2.8-4 6.9-4 6.9z"/><circle cx="11" cy="10.3" r="1.3"/></g>
+      </g></g></g></g>
+      <g transform="translate(469 281)"><g class="fx" style="--d: 1.60s; --dx: 222px"><g class="fy" style="--d: 1.60s; --dy: -265px"><g class="fs" style="--d: 1.60s">
+        <rect width="22" height="22" rx="6" fill="#F29900"/><g class="glyph"><path d="M5.5 11.2 16.5 6l-4.2 10.5-1.9-4.3z"/></g>
+      </g></g></g></g>
+      <g transform="translate(501 281)"><g class="fx" style="--d: 1.75s; --dx: 300px"><g class="fy" style="--d: 1.75s; --dy: -265px"><g class="fs" style="--d: 1.75s">
+        <rect width="22" height="22" rx="6" fill="#8E24AA"/><g class="glyph"><path d="M5.8 11h10.4a5.2 5.2 0 0 1-10.4 0zM9.2 8.2c0-.9.7-.9.7-1.9M12.6 8.2c0-.9.7-.9.7-1.9"/></g>
+      </g></g></g></g>
+      <!-- The pointer that clicks "Put away open tabs" -->
+      <g class="pointer"><path d="M0 0v17l4.6-4.2 3.1 6.7 2.6-1.2-3-6.6h6.3z"/></g>
+    </svg>
+  </figure>
 </header>
 
 <main id="main">
+  <figure class="real">
+    <picture>
+      <source srcset="/foldaway/images/new-tab-dark.webp" media="(prefers-color-scheme: dark)">
+      <img src="/foldaway/images/new-tab-light.webp" width="1920" height="1200" loading="lazy"
+           alt="Foldaway's new tab page: a search bar, shortcut circles, and folders of saved tabs, each showing its tabs' icons">
+    </picture>
+    <figcaption>The real thing: Foldaway's new tab page.</figcaption>
+  </figure>
+
   <div id="features"></div>
 
   <section class="feature">
     <div class="feature-text">
-      <p class="kicker"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 8h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM3 4h18v4H3zM10 12.5h4"/></svg>One click</p>
+      <p class="kicker">One click</p>
       <h2>Put your tabs away</h2>
       <p>Forty tabs you'll read later? A hundred? Put them away: each one is saved into a folder,
         named after its tab group or sorted by site, and closed, so your tab strip only holds what
@@ -45,10 +126,10 @@ bodyclass: home
       <p>Or put away just the tab you're on (right-click the page), the ones you tick, or drag a
         single tab into a folder.</p>
     </div>
-    <figure class="feature-shot">
+    <figure class="plate">
       <picture>
         <source srcset="/foldaway/images/open-now-dark.webp" media="(prefers-color-scheme: dark)">
-        <img src="/foldaway/images/open-now-light.webp" width="2000" height="1240" loading="lazy"
+        <img src="/foldaway/images/open-now-light.webp" width="1720" height="966" loading="lazy"
              alt="The Open now folder, listing the open tabs, each with a tick box, and a Put all away button">
       </picture>
     </figure>
@@ -56,17 +137,17 @@ bodyclass: home
 
   <section class="feature flip">
     <div class="feature-text">
-      <p class="kicker"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3.5 7.5A2 2 0 0 1 5.5 5.5h3.6l2 2h7.4a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg>Folders</p>
+      <p class="kicker">Folders</p>
       <h2>Bring any back in a click</h2>
       <p>Folders show their tabs' icons, like app folders on a phone. Open one tab or the whole
         folder, or search: Foldaway finds any tab you've saved and tells you which folder it's in.</p>
       <p>Put something away by mistake? Undo puts tabs back exactly where they were, in the same
         window, place and tab group.</p>
     </div>
-    <figure class="feature-shot">
+    <figure class="plate">
       <picture>
         <source srcset="/foldaway/images/folder-dark.webp" media="(prefers-color-scheme: dark)">
-        <img src="/foldaway/images/folder-light.webp" width="2000" height="1240" loading="lazy"
+        <img src="/foldaway/images/folder-light.webp" width="1720" height="838" loading="lazy"
              alt="An opened folder called Design, listing its seven saved tabs with their icons and sites">
       </picture>
     </figure>
@@ -74,15 +155,15 @@ bodyclass: home
 
   <section class="feature">
     <div class="feature-text">
-      <p class="kicker"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 4.5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-12a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="3.5" rx="1"/></svg>Import</p>
+      <p class="kicker">Import</p>
       <h2>Bring your tabs along</h2>
       <p>Coming from OneTab, Toby or Session Buddy? Paste OneTab's list, or import their export
         files or any browser's bookmarks, and your tabs arrive as folders.</p>
     </div>
-    <figure class="feature-shot">
+    <figure class="plate">
       <picture>
         <source srcset="/foldaway/images/import-dark.webp" media="(prefers-color-scheme: dark)">
-        <img src="/foldaway/images/import-light.webp" width="2000" height="1240" loading="lazy"
+        <img class="narrow" src="/foldaway/images/import-light.webp" width="1160" height="870" loading="lazy"
              alt="Foldaway's Paste links box, holding a list of links copied from OneTab">
       </picture>
     </figure>
@@ -90,107 +171,121 @@ bodyclass: home
 
   <section class="feature flip">
     <div class="feature-text">
-      <p class="kicker"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1 0 1.7-.8 1.7-1.7 0-.45-.17-.86-.45-1.16a1.7 1.7 0 0 1 1.25-2.84h2a4 4 0 0 0 4-4C20.5 6.9 16.7 3.5 12 3.5z"/><circle cx="7.6" cy="11.6" r="1"/><circle cx="10" cy="7.6" r="1"/><circle cx="14.6" cy="7.8" r="1"/></svg>Your page</p>
+      <p class="kicker">Your page</p>
       <h2>Make it yours</h2>
       <p>It looks like Chrome's own new tab page, or pick light, grey or dark, a soft gradient, or a
         picture of your own, whose colours Foldaway can take on.</p>
       <p>Add a clock, a second clock for another place, and the weather for your city, if you'd
         like them.</p>
     </div>
-    <figure class="feature-shot">
+    <figure class="plate plate-page">
       <img src="/foldaway/images/yours.webp" width="2000" height="1240" loading="lazy"
-           alt="Foldaway on a blue gradient, with two clocks and the weather in the top left corner">
+           alt="Foldaway on a blue background, with two clocks and the weather in the top left corner">
     </figure>
   </section>
 
-  <section class="more" aria-labelledby="moreTitle">
-    <h2 id="moreTitle">And the little things</h2>
-    <ul class="more-grid">
-      <li>
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.3 6.3 0 0 0 10.1 10.1z"/></svg>
-        <h3>Idle tabs sleep</h3>
-        <p>Tabs you haven't used for a while hand their memory back, and big folders reopen without
-          loading every tab at once.</p>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 3.5h6M10 3.5V9l-3 3.5v1h10v-1L14 9V3.5M12 13.5V21"/></svg>
-        <h3>What matters stays open</h3>
-        <p>Pinned tabs, tabs playing sound, video calls and the sites you choose are never put
-          away.</p>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.75" y="6" width="18.5" height="12" rx="2.5"/><path d="M6.75 9.75h.01M10.25 9.75h.01M13.75 9.75h.01M17.25 9.75h.01M6.75 13.25h.01M17.25 13.25h.01M9.75 14.25h4.5"/></svg>
-        <h3>Keyboard first</h3>
-        <p>Alt+T opens your folders, Alt+Shift+O puts everything away, and every part works with a
-          screen reader.</p>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.6-8.96 6 6 0 0 1 11.6 1.46 3.75 3.75 0 0 1-.25 7.5"/><path d="M12 12.5v6.5M9.3 15.2 12 12.5l2.7 2.7"/></svg>
-        <h3>Backups that keep up</h3>
-        <p>Export to a file, or keep a copy in your Chrome bookmarks that updates itself, and
-          syncs if Chrome sync is on.</p>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3.5" y="4.5" width="13" height="10" rx="2"/><path d="M7.5 18.5h11a2 2 0 0 0 2-2v-8"/></svg>
-        <h3>Beside your other new tab</h3>
-        <p>Already using another new tab extension? Foldaway's toolbar button still opens your
-          folders.</p>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 3 5 13.5h6l-1 7.5 8-10.5h-6z"/></svg>
-        <h3>Quick with a big hoard</h3>
-        <p>Tested with 20,000 saved tabs, and still quick to open.</p>
-      </li>
-    </ul>
+  <section class="things" aria-labelledby="thingsTitle">
+    <h2 id="thingsTitle">And the little things</h2>
+    <dl>
+      <div>
+        <dt><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.3 6.3 0 0 0 10.1 10.1z"/></svg>Idle tabs sleep</dt>
+        <dd>Tabs you haven't used for a while hand their memory back, and big folders reopen without
+          loading every tab at once.</dd>
+      </div>
+      <div>
+        <dt><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 3.5h6M10 3.5V9l-3 3.5v1h10v-1L14 9V3.5M12 13.5V21"/></svg>What matters stays open</dt>
+        <dd>Pinned tabs, tabs playing sound, video calls and the sites you choose are never put
+          away.</dd>
+      </div>
+      <div>
+        <dt><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.75" y="6" width="18.5" height="12" rx="2.5"/><path d="M6.75 9.75h.01M10.25 9.75h.01M13.75 9.75h.01M17.25 9.75h.01M6.75 13.25h.01M17.25 13.25h.01M9.75 14.25h4.5"/></svg>Keyboard first</dt>
+        <dd>Alt+T opens your folders, Alt+Shift+O puts everything away, and every part works with a
+          screen reader.</dd>
+      </div>
+      <div>
+        <dt><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.6-8.96 6 6 0 0 1 11.6 1.46 3.75 3.75 0 0 1-.25 7.5"/><path d="M12 12.5v6.5M9.3 15.2 12 12.5l2.7 2.7"/></svg>Backups that keep up</dt>
+        <dd>Export to a file, or keep a copy in your Chrome bookmarks that updates itself, and syncs
+          if Chrome sync is on.</dd>
+      </div>
+      <div>
+        <dt><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3.5" y="4.5" width="13" height="10" rx="2"/><path d="M7.5 18.5h11a2 2 0 0 0 2-2v-8"/></svg>Beside your other new tab</dt>
+        <dd>Already using another new tab extension? Foldaway's toolbar button still opens your
+          folders.</dd>
+      </div>
+      <div>
+        <dt><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13 3 5 13.5h6l-1 7.5 8-10.5h-6z"/></svg>Quick with a big hoard</dt>
+        <dd>Tested with 20,000 saved tabs, and still quick to open.</dd>
+      </div>
+    </dl>
   </section>
 
   <section class="promise" aria-labelledby="promiseTitle">
-    <div class="promise-card">
-      <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="5.5" y="10.5" width="13" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>
-      <h2 id="promiseTitle">Your tabs stay on your computer</h2>
-      <p>No account, no server, no tracking and no ads. Your folders live in Chrome's storage on
-        your computer, and in your Chrome bookmarks only if you turn that on. The one thing that
-        goes online is the weather, and only if you switch it on.</p>
-      <a class="promise-link" href="/foldaway/PRIVACY.html">Read the privacy policy
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></a>
+    <div class="promise-plate">
+      <div class="promise-text">
+        <h2 id="promiseTitle">Your tabs stay on your computer</h2>
+        <p>Foldaway has no server and asks for no account. Your folders live in Chrome's storage on
+          your computer, and in your Chrome bookmarks only if you turn that on.</p>
+        <a class="text-link" href="/foldaway/PRIVACY.html">Read the privacy policy
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></a>
+      </div>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>No account to make</li>
+        <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>No server: nothing of yours is uploaded</li>
+        <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>No tracking, no analytics, no ads</li>
+        <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Only the weather goes online, and only if you turn it on</li>
+      </ul>
     </div>
   </section>
 
   <section class="faq" aria-labelledby="faqTitle">
-    <h2 id="faqTitle">Questions</h2>
-    <details>
-      <summary>Where are my tabs kept?</summary>
-      <p>On your computer, in Chrome's storage for Foldaway. Settings → Backup can export
-        everything to a file whenever you like, or keep a copy in your Chrome bookmarks that stays
-        up to date by itself (and syncs with your Google account if Chrome sync is on).</p>
-    </details>
-    <details>
-      <summary>What happens to my folders if I remove Foldaway?</summary>
-      <p>Chrome deletes Foldaway's storage with it, so export a backup first. A copy in your
-        bookmarks stays, and Foldaway can bring your folders back from it.</p>
-    </details>
-    <details>
-      <summary>I already use another new tab extension. Can I keep it?</summary>
-      <p>Yes. Chrome gives the new tab page to one extension at a time; if another one has it,
-        Foldaway's toolbar button (and Alt+T) still opens your folders in a tab of their own.</p>
-    </details>
-    <details>
-      <summary>Can I bring my tabs from OneTab, Toby or Session Buddy?</summary>
-      <p>Yes: Settings → Backup → Import reads their export files, a list pasted from OneTab, or
-        any browser's bookmarks file.</p>
-    </details>
-    <details>
-      <summary>Does Foldaway cost anything?</summary>
-      <p>No. It's free, with no account to make.</p>
-    </details>
-    <details>
-      <summary>What does the weather send?</summary>
-      <p>Nothing unless you turn it on. Then your city's rough position goes to MET Norway for the
-        forecast, and what you type to find your city goes to Photon, a place search.
-        <a href="/foldaway/PRIVACY.html#what-leaves-your-computer">The privacy policy</a> has the
-        details.</p>
-    </details>
+    <div class="faq-head">
+      <h2 id="faqTitle">Questions</h2>
+      <p>Something else? <a href="https://github.com/victorirtwange/victorirtwange.github.io/issues/new?template=foldaway-problem.yml">Ask here</a>.</p>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Where are my tabs kept?</summary>
+        <p>On your computer, in Chrome's storage for Foldaway. Settings → Backup can export
+          everything to a file whenever you like, or keep a copy in your Chrome bookmarks that stays
+          up to date by itself (and syncs with your Google account if Chrome sync is on).</p>
+      </details>
+      <details>
+        <summary>What happens to my folders if I remove Foldaway?</summary>
+        <p>Chrome deletes Foldaway's storage with it, so export a backup first. A copy in your
+          bookmarks stays, and Foldaway can bring your folders back from it.</p>
+      </details>
+      <details>
+        <summary>I already use another new tab extension. Can I keep it?</summary>
+        <p>Yes. Chrome gives the new tab page to one extension at a time; if another one has it,
+          Foldaway's toolbar button (and Alt+T) still opens your folders in a tab of their own.</p>
+      </details>
+      <details>
+        <summary>Can I bring my tabs from OneTab, Toby or Session Buddy?</summary>
+        <p>Yes: Settings → Backup → Import reads their export files, a list pasted from OneTab, or
+          any browser's bookmarks file.</p>
+      </details>
+      <details>
+        <summary>Does Foldaway cost anything?</summary>
+        <p>No. It's free, with no account to make.</p>
+      </details>
+      <details>
+        <summary>What does the weather send?</summary>
+        <p>Nothing unless you turn it on. Then your city's rough position goes to MET Norway for the
+          forecast, and what you type to find your city goes to Photon, a place search.
+          <a href="/foldaway/PRIVACY.html#what-leaves-your-computer">The privacy policy</a> has the
+          details.</p>
+      </details>
+    </div>
   </section>
 </main>
 
 {% include foldaway-footer.html %}
+<script>
+  // Click the drawing to play it again.
+  document.getElementById('scene').addEventListener('click', (e) => {
+    const scene = e.currentTarget;
+    scene.classList.add('reset');
+    void scene.getBoundingClientRect();
+    requestAnimationFrame(() => scene.classList.remove('reset'));
+  });
+</script>
