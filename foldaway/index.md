@@ -11,7 +11,8 @@ away; another brings any of them back.
 ![Foldaway's new tab page](new-tab.png)
 
 - No account, no server, no tracking: your folders stay on your computer (and in your Chrome
-  bookmarks, if you turn on the copy there).
+  bookmarks, if you turn on the copy there). Only the weather goes online, if you turn it on: the
+  forecast comes from MET Norway, and your city is found with Photon.
   Read the [privacy policy](PRIVACY.md).
 - Questions or problems? [Open an issue](https://github.com/victorirtwange/victorirtwange.github.io/issues).
 

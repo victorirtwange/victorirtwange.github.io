@@ -1,9 +1,11 @@
 # Foldaway privacy policy
 
-*Last updated: 3 October 2026*
+*Last updated: 4 October 2026*
 
 **In short:** Foldaway keeps everything on your own computer. It has no server, no account, no
-analytics and no ads, and it never sells or shares anything about you.
+analytics and no ads, and it never sells anything about you. By itself, it sends nothing anywhere
+unless you turn on the weather: then your chosen city's rough position goes to MET Norway for the
+forecast, and what you type to find your city goes to Photon (by Komoot).
 
 ## What Foldaway handles, and why
 
@@ -14,16 +16,30 @@ analytics and no ads, and it never sells or shares anything about you.
 - **Your folders, shortcut circles and settings.** These are what you create in Foldaway: saved
   tabs (address, title, site icon and the date you put them away), your shortcuts, and your
   choices in Settings.
-- **Your most visited sites, as Chrome lists them.** Read once, the first time Foldaway opens, to
+- **Your most visited sites, as Chrome lists them.** Read the first time Foldaway opens, to
   start your shortcut circles with the sites you use most. The circles are kept, and so is that
-  first list, so that an import can tell whether you've changed your circles since.
+  first list, so that an import can tell whether you've changed your circles since. They're also
+  read when you type in one of Settings' site lists ("Sites that stay open", "Sites that never
+  sleep"), to suggest sites as you type; those suggestions aren't kept.
 - **The address each open tab is on.** When you close a tab, Foldaway checks, on your computer,
   whether its page is in one of your folders, and if so asks whether to remove it from there
   too. The addresses are kept in temporary storage that Chrome clears when it closes (noted
   whether or not the question is on, so it's ready whenever it is). You can turn the question
   off in Settings ("When I close a saved tab, ask whether to remove it from its folder").
 - **A background picture, if you choose one.** Foldaway keeps a smaller copy in its storage on
-  your computer, to show behind your folders. It's never uploaded, and it isn't part of backups.
+  your computer, to show behind your folders, with two colours picked out of it on your computer
+  for "Colours from your picture". It's never uploaded, and it isn't part of backups.
+- **Whether Foldaway is your new tab page.** Chrome shows one extension's new tab page. Foldaway
+  notes, on your computer, whether it's the one, so that its toolbar button can open your folders
+  either way.
+- **The city you choose for the weather, and the place for a second clock, if you turn them on.**
+  Their names (and the city's position and country) are kept with your settings, so they're in
+  your backups too. The latest forecast is kept so that every new tab can show it, until a newer
+  one replaces it, and after a failed try, when to try again; both are deleted when you turn the
+  weather off. See "What leaves your computer" for what the weather sends.
+- **Your computer's time zone and Chrome's language, if you turn on the clock or the weather.**
+  Read on your computer to show the time and the date, and to choose between °C and °F (by your
+  city's country, or else by the language).
 - **When you last looked at each tab.** This is used only to decide which tabs have been idle
   long enough to sleep or be put away. It's kept in temporary storage that Chrome clears when it
   closes.
@@ -39,13 +55,30 @@ Private (incognito) tabs are never shown, saved or put away.
 ## Where it's kept
 
 In Chrome's extension storage, on your device. It isn't uploaded, synced or copied anywhere by
-Foldaway, except into your own Chrome bookmarks if you turn that on (see Backups).
+Foldaway, except into your own Chrome bookmarks if you turn that on (see Backups), and except for
+the weather's rough position described below.
 
 ## What leaves your computer
 
-Foldaway itself sends nothing anywhere, and its page loads nothing from the web (even its font
-is part of the extension). These things do involve the internet, all of them ordinary browsing,
-and only when you ask for them:
+Foldaway sends nothing anywhere unless you turn on the weather, and its page loads nothing else
+from the web (even its font is part of the extension). The weather is off unless you turn it on
+in Settings → Clock & weather:
+
+- **The forecast.** While the weather is on, Foldaway asks MET Norway (the Norwegian
+  Meteorological Institute, [met.no](https://www.met.no/en)) for the forecast at your city's
+  rough position (rounded to about a kilometre), while a Foldaway page is open in front of you,
+  at most about every half hour, as each forecast runs out. If MET Norway can't answer, Foldaway
+  waits before asking again, longer each time. Nothing else is sent with it but what your browser
+  sends with any request (such as its version and language); as with any website, MET Norway sees
+  your internet address. Turn the weather off and this stops.
+- **Finding your city.** When you type your city's name in Settings, what you type is sent to
+  Photon, a place search run by Komoot ([photon.komoot.io](https://photon.komoot.io/)) on
+  OpenStreetMap's data, to list the places it could be, with your browser's language if it's
+  English, German, French or Italian, so that their names come in it. As with any website, Komoot
+  sees your internet address.
+
+These things also involve the internet, all of them ordinary browsing, and only when you ask for
+them:
 
 - **Searching.** When you search from the new tab page, Chrome sends your search to your default
   search engine, exactly as if you had typed it into the address bar.
@@ -80,14 +113,14 @@ until you delete it.
 
 | Permission | Why Foldaway needs it |
 |---|---|
-| Read your open tabs (`tabs`) | To list your open tabs, save the ones you put away, notice when a saved page's tab is closed, and find tabs that have been idle. |
+| Read your open tabs (`tabs`) | To list your open tabs, save the ones you put away, notice when a saved page's tab is closed, find tabs that have been idle, suggest the sites you have open as you type in Settings, tick "Keep this site open" for the page you're on, and tell whether a new tab is showing Foldaway. |
 | Tab groups (`tabGroups`) | To name folders after your tab groups and put tabs back into them. |
 | Site icons (`favicon`) | To show each site's icon, taken from Chrome's own icon cache. |
-| Most visited sites (`topSites`) | To start your shortcut circles with the sites you visit most, the first time Foldaway opens. |
+| Most visited sites (`topSites`) | To start your shortcut circles with the sites you visit most, the first time Foldaway opens, and to suggest sites when you type in Settings' site lists. |
 | Storage (`storage`, `unlimitedStorage`) | To keep your folders on your computer, with no size limit. |
 | Alarms (`alarms`) | To check once a minute for tabs that have been idle long enough to sleep or be put away. |
 | Search (`search`) | To send searches to your default search engine. |
-| Right-click menu (`contextMenus`) | To add "Put this tab away" to the menu you get when you right-click a page. |
+| Right-click menu (`contextMenus`) | To add "Put this tab away" and "Keep this site open" to the menu you get when you right-click a page. |
 | New tab page | To show Foldaway when you open a new tab. |
 | Bookmarks (`bookmarks`), optional | Asked for only when you turn on "Keep a copy in Chrome bookmarks" or import from it: to write the copy of your folders into your bookmarks and read it back. |
 
