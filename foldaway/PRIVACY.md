@@ -139,7 +139,7 @@ until you delete it.
 | Storage (`storage`, `unlimitedStorage`) | To keep your folders on your computer, with no size limit. |
 | Alarms (`alarms`) | To check once a minute for tabs that have been idle long enough to sleep or be put away. |
 | Search (`search`) | To send searches to your default search engine. |
-| Right-click menu (`contextMenus`) | To add "Put this tab away", "Keep this tab open" and "Keep this site open" (named for the site, such as "Keep youtube.com open") to the menu you get when you right-click a page. |
+| Right-click menu (`contextMenus`) | To add "Put this tab away", "Put this tab away in" (your folders, or a new one you name), "Keep this tab open" and "Keep this site open" (named for the site, such as "Keep youtube.com open") to the menu you get when you right-click a page. |
 | New tab page | To show Foldaway when you open a new tab. |
 | Bookmarks (`bookmarks`), optional | Asked for only when you turn on "Keep a copy in Chrome bookmarks" or import from it: to write the copy of your folders into your bookmarks and read it back. |
 
